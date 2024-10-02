@@ -1,0 +1,15 @@
+.H1 {
+    color: magenta;
+}
+
+.Home__icon {
+    position: absolute;
+    left: 85%;
+    top: 3%;
+}
+
+.Home__icon a {
+    left: 120%;
+    top: 30%;
+    white-space: nowrap;
+}
