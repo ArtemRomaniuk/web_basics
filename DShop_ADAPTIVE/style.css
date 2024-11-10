@@ -42,7 +42,7 @@ aside {
 
 .aside__container {
     width: fit-content;
-    height: 800px;
+    height: fit-content;
     display: flex;
     position: sticky;
     flex-direction: column;
@@ -55,7 +55,7 @@ aside {
 .aside__container>a,
 .aside__container>nav,
 .aside__container>.social__networks {
-    margin-bottom: 23px;
+    margin-bottom: 12%;
 }
 
 .logo {
@@ -77,7 +77,7 @@ aside {
     line-height: normal;
 }
 
-.catalog__btn {
+.aside__container .catalog__btn {
     color: #FFF;
     font-family: "Montserrat Alternates", serif;
     font-size: 16px;
@@ -88,6 +88,7 @@ aside {
     background-color: #BE3527;
     padding: 14px 37px;
     border-radius: 43px;
+    margin: 5% 0 18% 0;
 }
 
 .catalog__btn:active {
@@ -341,8 +342,8 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 608.701px;
     position: absolute;
     transform: rotate(1deg);
-    top: -50px;
-    left: 760px;
+    top: -8%;
+    left: 50%;
 }
 
 .banner__text {
@@ -466,9 +467,8 @@ input[type="search"]::-webkit-search-cancel-button {
 .cards {
     height: 940px;
     margin: 80px 65px 0 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card {
@@ -564,7 +564,6 @@ footer {
 }
 
 .subFooter {
-    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -591,7 +590,27 @@ footer {
 
 
 /*-------------- Adaptive X_X ----------------------*/
-@media (min-width : 1921px) {}
+@media (min-width : 1921px) {
+
+    .aside__container a,
+    .aside__container a>div {
+        font-size: 175%;
+    }
+
+    .svgLogo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        width: 350px;
+        height: 400px;
+    }
+
+    .banner__headphones {
+        left: 60%;
+    }
+}
 
 @media (max-width : 1366px) {}
 

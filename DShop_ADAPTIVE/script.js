@@ -14,8 +14,6 @@ function rollUp(event) {
     document.querySelectorAll(".category__content>a").forEach(el => {
         el.style.height = "25px";
     })
-    document.querySelector(".category").style.height = "300px";
-    document.querySelector(".aside__container").style.height = "800px";
     isExtended = true;
 }
 
@@ -31,8 +29,6 @@ document.querySelector(".accordion").addEventListener("click", (event) => {
         document.querySelectorAll(".category__content>a").forEach(el => {
             el.style.height = "0";
         })
-        document.querySelector(".category").style.height = "30px";
-        document.querySelector(".aside__container").style.height = "530px";
         isExtended = false;
 
     } else {
