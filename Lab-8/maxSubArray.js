@@ -1,35 +1,23 @@
 function maxSubArr(arr) {
-
-    let tmpMaxSum = arr[0];
-    let maxSum = arr[0];
-    let maxSubArr = arr[0];
-
-    let tmpStartIndex = 0;
+    let maxSum = 0;
     let startIndex = 0;
     let endIndex = 0;
 
-    for (let i = 1; i < arr.length; i++) {
-
-        if (arr[i] > tmpMaxSum + arr[i]) {
-            tmpMaxSum = arr[i];
-            tmpStartIndex = i;
-        } else {
-            tmpMaxSum += arr[i];
+    for (let i = 0; i < arr.length; i++) {
+        let subArrSum = 0;
+        for (let j = i; j < arr.length; j++) {
+            subArrSum += arr[j];
+            if (subArrSum > maxSum) {
+                maxSum = subArrSum;
+                startIndex = i;
+                endIndex = j;
+            }
         }
-
-        if (tmpMaxSum > maxSum) {
-            maxSum = tmpMaxSum;
-            startIndex = tmpStartIndex;
-            endIndex = i;
-        }
-
     }
 
-
-    maxSubArr = arr.slice(startIndex, endIndex + 1);
     return {
         maxSum,
-        maxSubArr
+        maxSubArr: arr.slice(startIndex, endIndex + 1)
     }
 }
 
